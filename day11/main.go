@@ -81,7 +81,7 @@ func main() {
 		},
 	}
 
-	fmt.Println(part1(monkeys))
+	// fmt.Println(part1(monkeys))
 	fmt.Println(part2(monkeys))
 }
 
@@ -143,7 +143,7 @@ func part2(monkeys []*Monkey) int64 {
 		modder *= m.divider
 	}
 
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10000; i++ {
 		for _, m := range monkeys {
 			m.Play(monkeys, func(lvl int64) int64 {
 				return lvl % modder
